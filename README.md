@@ -3,12 +3,13 @@
 
 ![PTCL-CLI](https://i.imgur.com/FHLLPAe.png)
 
-1. Reboot the router `[ 1 | reboot ]`
-2. Router's system info `[ 2 | sysinfo ]`
-3. Router's uptime `[ 3 | uptime ]`
-4. ADSL info `[ 4 | adsl_info ]`
-5. ADSL SNR check `[ 5 | adsl_snr ]`
-6. Exit `[ 6 | exit | q ]`
+You can use `ptcli` to perform following actions via command line
+- Reboot the router
+- Check Router's system info
+- Check Router's uptime
+- Check ADSL info
+- Check & calculate ADSL SNR
+
 
 ## ⚡️ Installation
 
