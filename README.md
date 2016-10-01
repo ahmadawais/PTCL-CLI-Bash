@@ -30,6 +30,9 @@ This command will perform the following actions:
  - `[ -c | --config ]` Use config data, if so configure the three variables 'host_address', 'username', and 'password
  - `[ -r | --reboot ]` Quick reboot, dependant on '--config' param."
 
+Here's a complimentary GIF.
+![PTCL-CLI GIF](https://i.imgur.com/TzeAw5B.gif)
+
 ## 🤔 Why was PTCL CLI Created?
 I am a command line junkie and it is too much work for me to go sign in and reboot the router or get the line parameters when I need to. So, I built this CLI and now with a bunch of aliases I am able to perform these actions within a single command.
 
