@@ -1,6 +1,8 @@
 # PTCL-CLI (`ptcli`)
 `ptcli`  is a bash CLI for PTCL routers. An intuitive PTCL-CLI to control PTCL routers via command line.
 
+![PTCL-CLI](https://i.imgur.com/FHLLPAe.png)
+
 1. Reboot the router `[ 1 | reboot ]`
 2. Router's system info `[ 2 | sysinfo ]`
 3. Router's uptime `[ 3 | uptime ]`
