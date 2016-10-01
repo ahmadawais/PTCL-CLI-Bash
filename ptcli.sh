@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
-# Bash CLI for PTCL.
+# Bash CLI for PTCL (`ptcli`).
 #
 # Version: 1.0.0
 # Author: Ahmad Awais
 # Author URL: http://AhmadAwais.com/
 #
-#️ Usage: sh ptc_cli.sh [ -c |--config ], [ -h | help ]
+#️ Usage: ptcli [ -c |--config ], [ -h | help ]
 #️  - [ -h | help ] Use help
 #️  - [ -c | --config ] Use config data, if so configure the three variables 'host_address', 'username', and 'password
 #  - [ -r | --reboot ] Quick reboot, dependant on '--config' param."
@@ -30,7 +30,7 @@ for i in "$@" ; do
 	# Help.
 	if [[ $i == "-h" || $i == "help" ]] ; then
 		echo "——————————————————————————————————"
-		echo "⚡️ Usage: sh ptc_cli.sh [ -c |--config ], [ -h | help ]"
+		echo "⚡️ Usage: ptcli [ -c |--config ], [ -h | help ]"
 		echo "⚡️  - [ -h | help ] Use help."
 		echo "⚡️  - [ -c | --config ] Use config data, if so configure the three variables 'host_address', 'username', and 'password'"
 		echo "⚡️  - [ -r | --reboot ] Quick reboot, dependant on '--config' param."
@@ -106,7 +106,3 @@ do
 		* ) echo "——————————————————————————————————"; echo "❌  Wrong input! Try again!"; echo "——————————————————————————————————"; break ;;
 	esac
 done
-
-# Two ways to reboot.
-#eval '{ echo $username; sleep 1; echo $password; sleep 1; echo '?'; sleep 5; }' | telnet "$host_address"
-# (sleep 1;echo "$username";sleep 1;echo "$password";sleep 1;echo "?"; sleep 3;) | telnet "$host_address"

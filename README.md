@@ -1,5 +1,5 @@
-# PTCL-CLI
-Bash CLI for PTCL. Perform several useful actions via command line for the local PTCL routers.
+# PTCL-CLI (`ptcli`)
+`ptcli`  is a bash CLI for PTCL routers. An intuitive PTCL-CLI to control PTCL routers via command line.
 
 1. Reboot the router `[ 1 | reboot ]`
 2. Router's system info `[ 2 | sysinfo ]`
@@ -10,9 +10,20 @@ Bash CLI for PTCL. Perform several useful actions via command line for the local
 
 ## Installation
 
+Open command line terminal (I prefer iTerm2) and run the following command.
+
+```bash
+sudo wget -qO ptcli https://git.io/vPtPS && sudo chmod +x ./ptcli && sudo install ./ptcli /usr/local/bin/ptcli
+```
+
+This command will perform the following actions:
+- Use sudo permissions
+- Use wget to download `PTCL-CLI` and rename it to `ptcli`
+- Make the `ptcli` executable
+- Install `ptcli` inside /usr/local/bin/ folder.
 
 ## 🙌 Usage 
-️ Usage: sh ptc_cli.sh `[ -c |--config ]`, `[ -h | help ]`
+️ Usage: ptcli `[ -c |--config ]`, `[ -h | help ]`
 ️ - `[ -h | help ]` Use help
  - `[ -c | --config ]` Use config data, if so configure the three variables 'host_address', 'username', and 'password
  - `[ -r | --reboot ]` Quick reboot, dependant on '--config' param."
@@ -36,3 +47,6 @@ I have built this CLI using Mac. It needs to be run on Bash or ZSH based shell.
 - NEW: ADSL info `[ 4 | adsl_info ]`
 - NEW: ADSL SNR check `[ 5 | adsl_snr ]`
 - NEW: Exit `[ 6 | exit | q ]`
+
+## ℹ️ License
+MIT License. Copyrights <Ahmad Awais>. This script has no official affiliation with PTCL.
