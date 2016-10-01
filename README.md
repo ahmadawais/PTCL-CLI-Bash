@@ -8,7 +8,7 @@
 5. ADSL SNR check `[ 5 | adsl_snr ]`
 6. Exit `[ 6 | exit | q ]`
 
-## Installation
+## ⚡️ Installation
 
 Open command line terminal (I prefer iTerm2) and run the following command.
 
