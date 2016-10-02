@@ -32,6 +32,7 @@ This command will perform the following actions:
  - `[ -r | --reboot ]` Quick reboot, dependant on '--config' param."
 
 Here's a complimentary GIF.
+
 ![PTCL-CLI GIF](https://i.imgur.com/TzeAw5B.gif)
 
 ## 🤔 Why was PTCL CLI Created?
