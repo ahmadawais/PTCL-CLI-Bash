@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 # Bash CLI for PTCL (`ptcli`).
 #
-# Version: 1.0.0
+# Version: 1.1.0
 # Author: Ahmad Awais
 # Author URL: http://AhmadAwais.com/
 #
@@ -12,6 +12,9 @@
 
 # if the config parameter is present then use the configuration.
 param=$1
+
+# Debugger.
+# echo "ℹ️ | DEBUG: Starting... | ℹ️ "
 
 # Check all params for config
 for i in "$@" ; do
@@ -68,32 +71,28 @@ else
 
 	# $password User to access.
 	password="XXXXX"
-
-	# Also reboot?
-	if [[ "$is_reboot" == "yes" ]]; then
-		echo "——————————————————————————————————"
-		echo "⏲ Rebooting..."
-		echo "——————————————————————————————————"
-		(sleep 1;echo "$username";sleep 1;echo "$password";sleep 1;echo "reboot"; sleep 1;) | telnet "$host_address"
-		echo "——————————————————————————————————"
-		exit
-	fi
 fi
 
-# $switch command switcher.
-echo "——————————————————————————————————"
-echo "👉  Enter what do you want to do? :"
-echo "␥   — Read the options below and chose an option by entering what's present in the square brackets E.g. [ command ]:"
-echo "␥   — 1. Reboot the router [ 1 | reboot ]:"
-echo "␥   — 2. Router's system info [ 2 | sysinfo ]:"
-echo "␥   — 3. Router's uptime [ 3 | uptime ]:"
-echo "␥   — 4. ADSL info [ 4 | adsl_info ]:"
-echo "␥   — 5. ADSL SNR check [ 5 | adsl_snr ]:"
-echo "␥   — 6. Exit [ 6 | exit | q ]:"
-echo "——————————————————————————————————"
-read -r switch
+# If no auto reboot command, then ask for options.
+if [[ "$is_reboot" != "yes" ]]; then
+	# $switch command switcher.
+	echo "——————————————————————————————————"
+	echo "👉  Enter what do you want to do? :"
+	echo "␥   — Read the options below and chose an option by entering what's present in the square brackets E.g. [ command ]:"
+	echo "␥   — 1. Reboot the router [ 1 | reboot ]:"
+	echo "␥   — 2. Router's system info [ 2 | sysinfo ]:"
+	echo "␥   — 3. Router's uptime [ 3 | uptime ]:"
+	echo "␥   — 4. ADSL info [ 4 | adsl_info ]:"
+	echo "␥   — 5. ADSL SNR check [ 5 | adsl_snr ]:"
+	echo "␥   — 6. Exit [ 6 | exit | q ]:"
+	echo "——————————————————————————————————"
+	read -r switch
+else
+	# If reboot -r triggered then just reboot it.
+	switch="1"
+fi
 
-# 	echo "Wrong input, exitting!"
+# echo "Wrong input, exitting!"
 while true
 do
 	case $switch in

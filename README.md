@@ -46,6 +46,10 @@ I have built this CLI using Mac. It needs to be run on Bash or ZSH based shell.
 
 ## ℹ️ Changelog
 
+###1.1.0 (2017-01-31)
+- UPDATE: Auto reboot routine now works
+- UPDATE: Better documentation
+
 ###1.0.0 (2016-10-01)
 - First version
 - NEW: Reboot the router `[ 1 | reboot ]`
